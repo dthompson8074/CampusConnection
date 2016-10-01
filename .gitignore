@@ -43,3 +43,9 @@ captures/
 .idea/
 CampusConnection/.idea/
 
+# From Dave
+/local.properties
+.DS_Store
+/captures
+.externalNativeBuild
+
