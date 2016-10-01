@@ -5,6 +5,7 @@ package com.codingcrew.campusconnection;
  */
 
 public class User {
+
     private String mUsername;
     private String mPassword;
 
