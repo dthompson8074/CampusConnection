@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>VQPBasicHttpBinding_ICalculator methods</title>
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/github.min.css">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <link rel='stylesheet' type='text/css' href='../Styles/Blueprint_Styles/Style.css' />
+    <script src='../Scripts/Blueprint_Scripts/Script.js' type='text/javascript'></script>
+    <style type="text/css">
+        .syntaxhighlighter {
+            overflow-y: hidden !important;
+            overflow-x: auto !important;
+        }
+    </style>
+</head>
+<body>
+        <h2 id="AddNumbers">AddNumbers</h2>
+        <p>
+            
+        </p>
+        <h4>Synchronous operation</h4>
+        <pre>
+        <code class="java">
+import com.codingcrew.campusconnection;
+...
+
+Double param0 = ...;//initialization code
+Double param1 = ...;//initialization code
+
+            
+VQPBasicHttpBinding_ICalculator service = new VQPBasicHttpBinding_ICalculator("http://129.118.70.18/campusconnection/Calculator.svc");
+Double res = service.AddNumbers(param0,param1);
+//in res variable you have a value returned from your web service
+            </code>
+</pre>
+            <p>To invoke a synchronous method, you need to do this in separate thread (for example by using <a href="http://developer.android.com/reference/android/os/AsyncTask.html">AsyncTask</a> class)</p>
+            <h4>Asynchronous operation</h4>
+            <pre>
+            <code class="java">
+import com.codingcrew.campusconnection;
+...
+Double param0 = ...;//initialization code
+Double param1 = ...;//initialization code
+
+VQPBasicHttpBinding_ICalculator service = new VQPBasicHttpBinding_ICalculator(new IServiceEvents() {
+    @Override
+    public void Starting() {
+    }
+    @Override
+    public void Completed(OperationResult result) {
+        Double res = (Double)result.Result;
+        //in res variable you have a value returned from your web service
+    }
+},"http://129.118.70.18/campusconnection/Calculator.svc");
+service.AddNumbersAsync (param0,param1);
+                </code>
+</pre>
+        <br />
+        <br />
+        <h2 id="SubstractNumbers">SubstractNumbers</h2>
+        <p>
+            
+        </p>
+        <h4>Synchronous operation</h4>
+        <pre>
+        <code class="java">
+import com.codingcrew.campusconnection;
+...
+
+Double param0 = ...;//initialization code
+Double param1 = ...;//initialization code
+
+            
+VQPBasicHttpBinding_ICalculator service = new VQPBasicHttpBinding_ICalculator("http://129.118.70.18/campusconnection/Calculator.svc");
+Double res = service.SubstractNumbers(param0,param1);
+//in res variable you have a value returned from your web service
+            </code>
+</pre>
+            <p>To invoke a synchronous method, you need to do this in separate thread (for example by using <a href="http://developer.android.com/reference/android/os/AsyncTask.html">AsyncTask</a> class)</p>
+            <h4>Asynchronous operation</h4>
+            <pre>
+            <code class="java">
+import com.codingcrew.campusconnection;
+...
+Double param0 = ...;//initialization code
+Double param1 = ...;//initialization code
+
+VQPBasicHttpBinding_ICalculator service = new VQPBasicHttpBinding_ICalculator(new IServiceEvents() {
+    @Override
+    public void Starting() {
+    }
+    @Override
+    public void Completed(OperationResult result) {
+        Double res = (Double)result.Result;
+        //in res variable you have a value returned from your web service
+    }
+},"http://129.118.70.18/campusconnection/Calculator.svc");
+service.SubstractNumbersAsync (param0,param1);
+                </code>
+</pre>
+        <br />
+        <br />
+        <h2 id="MultiplyNumbers">MultiplyNumbers</h2>
+        <p>
+            
+        </p>
+        <h4>Synchronous operation</h4>
+        <pre>
+        <code class="java">
+import com.codingcrew.campusconnection;
+...
+
+String param0 = ...;//initialization code
+String param1 = ...;//initialization code
+
+            
+VQPBasicHttpBinding_ICalculator service = new VQPBasicHttpBinding_ICalculator("http://129.118.70.18/campusconnection/Calculator.svc");
+String res = service.MultiplyNumbers(param0,param1);
+//in res variable you have a value returned from your web service
+            </code>
+</pre>
+            <p>To invoke a synchronous method, you need to do this in separate thread (for example by using <a href="http://developer.android.com/reference/android/os/AsyncTask.html">AsyncTask</a> class)</p>
+            <h4>Asynchronous operation</h4>
+            <pre>
+            <code class="java">
+import com.codingcrew.campusconnection;
+...
+String param0 = ...;//initialization code
+String param1 = ...;//initialization code
+
+VQPBasicHttpBinding_ICalculator service = new VQPBasicHttpBinding_ICalculator(new IServiceEvents() {
+    @Override
+    public void Starting() {
+    }
+    @Override
+    public void Completed(OperationResult result) {
+        String res = (String)result.Result;
+        //in res variable you have a value returned from your web service
+    }
+},"http://129.118.70.18/campusconnection/Calculator.svc");
+service.MultiplyNumbersAsync (param0,param1);
+                </code>
+</pre>
+        <br />
+        <br />
+        <h2 id="DivisionNumbers">DivisionNumbers</h2>
+        <p>
+            
+        </p>
+        <h4>Synchronous operation</h4>
+        <pre>
+        <code class="java">
+import com.codingcrew.campusconnection;
+...
+
+String param0 = ...;//initialization code
+String param1 = ...;//initialization code
+
+            
+VQPBasicHttpBinding_ICalculator service = new VQPBasicHttpBinding_ICalculator("http://129.118.70.18/campusconnection/Calculator.svc");
+String res = service.DivisionNumbers(param0,param1);
+//in res variable you have a value returned from your web service
+            </code>
+</pre>
+            <p>To invoke a synchronous method, you need to do this in separate thread (for example by using <a href="http://developer.android.com/reference/android/os/AsyncTask.html">AsyncTask</a> class)</p>
+            <h4>Asynchronous operation</h4>
+            <pre>
+            <code class="java">
+import com.codingcrew.campusconnection;
+...
+String param0 = ...;//initialization code
+String param1 = ...;//initialization code
+
+VQPBasicHttpBinding_ICalculator service = new VQPBasicHttpBinding_ICalculator(new IServiceEvents() {
+    @Override
+    public void Starting() {
+    }
+    @Override
+    public void Completed(OperationResult result) {
+        String res = (String)result.Result;
+        //in res variable you have a value returned from your web service
+    }
+},"http://129.118.70.18/campusconnection/Calculator.svc");
+service.DivisionNumbersAsync (param0,param1);
+                </code>
+</pre>
+        <br />
+        <br />
+</body>
+</html>
+

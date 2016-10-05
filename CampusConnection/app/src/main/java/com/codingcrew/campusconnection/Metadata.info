@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<EasyWSDL>
+  <Info>
+    <Version>5.0.0.2</Version>
+    <AccountType>Basic</AccountType>
+    <LibrariesFolder>libs/easywsdl</LibrariesFolder>
+    <MainClass>VQPBasicHttpBinding_ICalculator</MainClass>
+  </Info>
+  <Settings>
+    <Url>http://129.118.70.18/campusconnection/Calculator.svc?singleWsdl</Url>
+    <ClassPrefix/>
+    <PackageName>com.codingcrew.campusconnection</PackageName>
+    <AddDocumentation>false</AddDocumentation>
+    <EnableAdvancedFeatures>false</EnableAdvancedFeatures>
+    <EnableMTOM>false</EnableMTOM>
+    <EncodeIllegalCharacters>true</EncodeIllegalCharacters>
+    <GenerateAsyncOperations>true</GenerateAsyncOperations>
+    <ImplementSerializable>false</ImplementSerializable>
+    <ImplementParcelable>false</ImplementParcelable>
+    <AddAnyCollection>false</AddAnyCollection>
+    <UseJodaTime>false</UseJodaTime>
+    <Repackage/>
+    <GenerateHtmlDocumentation>true</GenerateHtmlDocumentation>
+  </Settings>
+  <Files>
+    <File>docs/Html/MTOMTransfer.html</File>
+    <File>docs/Html/Tips.html</File>
+    <File>docs/Html/VQPBasicHttpBinding_ICalculator.html</File>
+    <File>docs/Html/VQPBasicHttpBinding_ICalculator_methods.html</File>
+    <File>docs/Index.html</File>
+    <File>docs/Styles/Blueprint_Styles/Style.css</File>
+    <File>LoginActivity.java</File>
+    <File>ProfileActivity.java</File>
+    <File>User.java</File>
+    <File>VQPBasicHttpBinding_ICalculator.java</File>
+    <File>VQPExtendedSoapSerializationEnvelope.java</File>
+    <File>VQPFunctions.java</File>
+    <File>VQPHelper.java</File>
+    <File>VQPIServiceEvents.java</File>
+    <File>VQPMarshalGuid.java</File>
+    <File>VQPOperationResult.java</File>
+  </Files>
+  <Libraries>
+    <File>ksoap2-android-assembly-3.6.1-jar-with-dependencies.jar</File>
+  </Libraries>
+</EasyWSDL>
