@@ -23,7 +23,7 @@ public class LoginActivity extends AppCompatActivity {
         mUser = new User();
 
         //Link the activity_login.xml attributes to current activity
-        mUsername = (EditText) findViewById(R.id.textViewUsername);
+        mUsername = (EditText) findViewById(R.id.courseNumber);
         mPassword = (EditText) findViewById(R.id.textViewPassword);
 
         //Store the user name into a string variable
