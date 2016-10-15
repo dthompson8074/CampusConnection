@@ -1,11 +1,11 @@
 <resources>
-    <string name="app_name">CampusConnect</string>
+    <string name="app_name">Campus Connection</string>
     <string name="campus_connection">Campus Connection</string>
     <string name="ProfileActivityTitle">Profile Activity</string>
-    <string name="title_newStudyEvent_activity">StudyEvent</string>
+    <string name="title_newStudyEvent_activity">Study Event</string>
     <string name="Confirm_Password">Confirm Password</string>
     <string name="Submit">Submit</string>
     <string name="TTU_Email">Email</string>
     <string name="Password">Password</string>
-    <string name="title_Registor_Activity">Registor</string>
+    <string name="title_Register_Activity">Register</string>
 </resources>

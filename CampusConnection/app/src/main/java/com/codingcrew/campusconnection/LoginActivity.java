@@ -90,7 +90,7 @@ public class LoginActivity extends AppCompatActivity {
 
                 Toast toast = Toast.makeText(getApplicationContext(), "Thank you for using our services", Toast.LENGTH_LONG);
                 toast.show();
-                Intent i = RegistorActivity.newIntentRegistor(LoginActivity.this);
+                Intent i = RegisterActivity.newIntentRegistor(LoginActivity.this);
                 startActivity(i);
 
             }

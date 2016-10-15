@@ -15,14 +15,14 @@ import android.widget.Toast;
  * Created by Saul on 10/14/2016.
  */
 
-public class RegistorActivity extends AppCompatActivity {
+public class RegisterActivity extends AppCompatActivity {
 
     Button mButtonSend;
     EditText mEmail, mPassword, mCPassword;
     User mUser = new User();
 
     public static Intent newIntentRegistor(Context packageContext) {
-        Intent i = new Intent(packageContext, RegistorActivity.class);
+        Intent i = new Intent(packageContext, RegisterActivity.class);
         return i;
     }
 
@@ -95,7 +95,7 @@ public class RegistorActivity extends AppCompatActivity {
                 Toast toast = Toast.makeText(getApplicationContext(), mUser.getUsername() + " " + mUser.getPassword(), Toast.LENGTH_LONG);
                 toast.show();
                 String name = mUser.getUsername();
-                Intent i = ProfileActivity.newIntent(RegistorActivity.this, name);
+                Intent i = ProfileActivity.newIntent(RegisterActivity.this, name);
                 startActivity(i);
             }
         });
