@@ -24,8 +24,12 @@
             android:label="@string/ProfileActivityTitle">
         </activity>
         <activity
-            android:name=".NewStudyEvent"
-            android:label="@string/title_newStudyEvent_activity" >
+        android:name=".NewStudyEvent"
+        android:label="@string/title_newStudyEvent_activity" >
+    </activity>
+        <activity
+            android:name=".RegistorActivity"
+            android:label="@string/title_Registor_Activity" >
         </activity>
     </application>
 

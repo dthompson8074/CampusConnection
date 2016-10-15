@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/maroon"
+    tools:context="com.codingcrew.campusconnection.RegistorActivity"
+
+    android:id="@+id/activity_registor">
+
+    <EditText
+        android:hint="@string/TTU_Email"
+        android:gravity="center_horizontal"
+        android:textColorHint="#979e9797"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/registorEmail"
+        android:background="#FFFFFFFF"
+        android:layout_marginBottom="119dp"
+        android:layout_above="@+id/registorPassword"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/black"/>
+
+    <Button
+        android:text="@string/Submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonSend"
+        android:background="@drawable/button"
+        android:layout_marginBottom="215dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"/>
+
+    <EditText
+        android:hint="@string/Confirm_Password"
+        android:textColorHint="#979e9797"
+        android:gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberPassword"
+        android:ems="10"
+        android:id="@+id/confirmPassword"
+        android:background="#FFFFFFFF"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/registorPassword"
+        android:layout_alignStart="@+id/registorPassword"
+        android:textColor="@android:color/black"/>
+
+    <EditText
+        android:hint="@string/Password"
+        android:textColorHint="#979e9797"
+        android:gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberPassword"
+        android:ems="10"
+        android:id="@+id/registorPassword"
+        android:background="#FFFFFFFF"
+        android:layout_marginBottom="125dp"
+        android:textColor="@android:color/black"
+        android:layout_above="@+id/confirmPassword"
+        android:layout_alignLeft="@+id/registorEmail"
+        android:layout_alignStart="@+id/registorEmail"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"/>
+
+</RelativeLayout>
