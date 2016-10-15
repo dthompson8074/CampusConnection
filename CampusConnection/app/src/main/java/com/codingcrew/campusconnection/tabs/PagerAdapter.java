@@ -1,4 +1,4 @@
-package com.codingcrew.tabviewscustom;
+package com.codingcrew.campusconnection.tabs;
 
 /**
  * Created by Saul on 10/13/2016.

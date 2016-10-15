@@ -1,4 +1,4 @@
-package com.codingcrew.tabviewscustom;
+package com.codingcrew.campusconnection.tabs;
 
 /**
  * Created by Saul on 10/13/2016.
@@ -11,6 +11,8 @@ package com.codingcrew.tabviewscustom;
         import android.view.LayoutInflater;
         import android.view.View;
         import android.view.ViewGroup;
+
+        import com.codingcrew.campusconnection.R;
 
 public class TabFragment3 extends Fragment {
 

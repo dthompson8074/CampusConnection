@@ -1,5 +1,6 @@
 package com.codingcrew.campusconnection;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
@@ -23,7 +24,7 @@ public class LoginActivity extends AppCompatActivity {
         mUser = new User();
 
         //Link the activity_login.xml attributes to current activity
-        mUsername = (EditText) findViewById(R.id.courseNumber);
+        mUsername = (EditText) findViewById(R.id.textViewUsername);
         mPassword = (EditText) findViewById(R.id.textViewPassword);
 
         //Store the user name into a string variable
@@ -68,7 +69,7 @@ public class LoginActivity extends AppCompatActivity {
         mButtonLogin = (Button) findViewById(R.id.buttonLogin);
         mButtonRegister = (Button) findViewById(R.id.buttonRegister);
 
-
+        /* By pressing the button the Intent will launch the next activity*/
         mButtonLogin.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
@@ -76,6 +77,10 @@ public class LoginActivity extends AppCompatActivity {
                         " " + mUser.getPassword()
                         , Toast.LENGTH_LONG);
                 toast.show();
+
+                String name = mUser.getUsername();
+                Intent i = ProfileActivity.newIntent(LoginActivity.this, name);
+                startActivity(i);
             }
         });
 
