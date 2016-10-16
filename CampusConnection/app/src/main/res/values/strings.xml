@@ -8,4 +8,6 @@
     <string name="TTU_Email">Email</string>
     <string name="Password">Password</string>
     <string name="title_Register_Activity">Register</string>
+    <string name="profile">Proflie</string>
+    <string name="create_event">Create Event</string>
 </resources>

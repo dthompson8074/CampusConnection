@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.codingcrew.campusconnection"
-          android:screenOrientation="portrait"
-            >
-
+          android:screenOrientation="portrait">
 
     <application
         android:allowBackup="true"
@@ -19,18 +17,20 @@
             </intent-filter>
         </activity>
         <activity
-            android:theme="@style/AppTheme"
             android:name=".ProfileActivity"
-            android:label="@string/ProfileActivityTitle">
+            android:label="@string/ProfileActivityTitle"
+            android:theme="@style/AppTheme">
         </activity>
         <activity
-        android:name=".NewStudyEvent"
-        android:label="@string/title_newStudyEvent_activity" >
-    </activity>
+            android:name=".NewStudyEvent"
+            android:label="@string/title_newStudyEvent_activity">
+        </activity>
         <activity
             android:name=".RegisterActivity"
-            android:label="@string/title_Register_Activity" >
+            android:label="@string/title_Register_Activity">
         </activity>
+       <!--<activity android:name=".FeedActivity">
+        </activity>-->
     </application>
 
 </manifest>

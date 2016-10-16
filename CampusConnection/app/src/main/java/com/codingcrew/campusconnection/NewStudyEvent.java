@@ -1,5 +1,7 @@
 package com.codingcrew.campusconnection;
 
+import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
@@ -18,6 +20,11 @@ public class NewStudyEvent extends AppCompatActivity {
     CheckBox mPay;
     Button mCreateButton;
     EventData mEvent = new EventData();
+
+    public static Intent newIntentStudy(Context packageContext, String mName) {
+        Intent i = new Intent(packageContext, NewStudyEvent.class);
+        return i;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
