@@ -15,14 +15,10 @@ namespace CCS
         {
         }
 
-        public bool DoLogin(string username, string password)
+        public Account DoLogin(string email, string password)
         {
-            return true;
-        }
-
-        public void CreateAccount()
-        {
-            throw new NotImplementedException();
-        }
+            CampusConnectionEntitiesContainer context = new CCS.CampusConnectionEntitiesContainer();
+            return (from a in context.Accounts where a.Email == email && a.Password == password select a).SingleOrDefault();            
+        }        
     }
 }

@@ -15,9 +15,6 @@ namespace CCS
         void DoWork();
 
         [OperationContract]
-        bool DoLogin(string username, string password);
-
-        [OperationContract]
-        void CreateAccount();
+        Account DoLogin(string email, string password);        
     }
 }
