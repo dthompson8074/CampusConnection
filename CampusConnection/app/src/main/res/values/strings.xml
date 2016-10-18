@@ -1,17 +1,25 @@
 <resources>
     <string name="app_name">Campus Connection</string>
     <string name="campus_connection">Campus Connection</string>
-    <string name="ProfileActivityTitle">Profile Activity</string>
+    <string name="ProfileActivityTitle">Profile</string>
     <string name="title_newStudyEvent_activity">Study Event</string>
     <string name="Confirm_Password">Confirm Password</string>
     <string name="Submit">Submit</string>
     <string name="TTU_Email">Email</string>
     <string name="Password">Password</string>
     <string name="title_Register_Activity">Register</string>
-    <string name="profile">Proflie</string>
+    <string name="profile">Profile</string>
     <string name="create_event">Create Event</string>
     <string name="username">Username</string>
     <string name="password">Password</string>
     <string name="login">Login</string>
     <string name="register">Register</string>
+    <string name="Name">Name</string>
+    <string name="create">Create</string>
+    <string name="extra_information">Extra Information</string>
+    <string name="prefix">Prefix</string>
+    <string name="pay">Pay?</string>
+    <string name="would_you_like_to_create_an_event">Would you like to Create an Event?</string>
+    <string name="what_is_happening_this_week">What is happening this week?</string>
+    <string name="expand_your_world_let_s_meet_new_people">Expand your world, meet new people.</string>
 </resources>

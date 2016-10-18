@@ -15,17 +15,13 @@ import android.widget.Toast;
 
 public class NewStudyEvent extends AppCompatActivity {
 
-    private static final String EXTRA_Name =
-            "com.codingcrew.campusconnection.name";
-    User mUser = User.getInstance();
-
     EditText mLocation, mExtraInfo, mCoursePrefix, mCourseNumber,
              mMaxResponse;
-    CheckBox mPay;
+   // CheckBox mPay;
     Button mCreateButton;
     EventData mEvent = new EventData();
 
-    public static Intent newIntentStudy(Context packageContext, String mName) {
+    public static Intent newIntentStudy(Context packageContext) {
         Intent i = new Intent(packageContext, NewStudyEvent.class);
         return i;
     }
@@ -40,7 +36,7 @@ public class NewStudyEvent extends AppCompatActivity {
         mCourseNumber = (EditText) findViewById(R.id.courseNumber);
         mCoursePrefix = (EditText) findViewById(R.id.coursePrefix);
         mMaxResponse = (EditText) findViewById(R.id.maxResponders);
-        mPay = (CheckBox) findViewById(R.id.payBox);
+       // mPay = (CheckBox) findViewById(R.id.payBox);
 
         /* Enable the user to choose a Course Prefix*/
 
@@ -144,22 +140,24 @@ public class NewStudyEvent extends AppCompatActivity {
             }
         });
 
-        /* Enable the user to choose they will pay or not*/
+        /* Enable the user to choose they will pay or not
         mPay.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
             // Set the crime's solved property
                   mEvent.setPayed(isChecked);
                 }    });
+                */
 
         /* create event*/
         mCreateButton = (Button) findViewById(R.id.createEvent);
         mCreateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast toast = Toast.makeText(getApplicationContext(), "Event " + mEvent.getPrefix() +
-                        " " + mEvent.getCourse() + " " + mEvent.getMaxpeople() + " " + mEvent.getlocation()
-                        + " " + mEvent.getInformation() +" " + String.valueOf(mEvent.getPayed())
+                Toast toast = Toast.makeText(getApplicationContext(), "Event created for " + mEvent.getPrefix() +
+                        " " + mEvent.getCourse() + ". " + "The maximum number of people is " +
+                        mEvent.getMaxpeople() + " and the location is at " + mEvent.getlocation()
+                        + ". Additional information is: " + mEvent.getInformation()
                         , Toast.LENGTH_LONG);
                 toast.show();
             }

@@ -18,17 +18,16 @@ package com.codingcrew.campusconnection;
 
 public class ProfileActivity extends AppCompatActivity {
 
-    private static final String EXTRA_Name =
-            "com.codingcrew.campusconnection.name";
+
     User mUser = User.getInstance();
 
-    public static Intent newIntent(Context packageContext, String mName) {
+    public static Intent newIntent(Context packageContext) {
         Intent i = new Intent(packageContext, ProfileActivity.class);
-        i.putExtra(EXTRA_Name, mName);
         return i;
     }
 
     TextView mProfileName;
+    TextView mEmail;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,7 +40,7 @@ public class ProfileActivity extends AppCompatActivity {
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);
         tabLayout.addTab(tabLayout.newTab().setText("Study Event"));
         tabLayout.addTab(tabLayout.newTab().setText("Schedule"));
-        //tabLayout.addTab(tabLayout.newTab().setText("Feed"));
+        tabLayout.addTab(tabLayout.newTab().setText("Buddy"));
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
 
@@ -68,7 +67,10 @@ public class ProfileActivity extends AppCompatActivity {
         });
 
         mProfileName = (TextView) findViewById(R.id.ProfileName);
-        mProfileName.setText(getIntent().getStringExtra(EXTRA_Name));
+        mProfileName.setText(mUser.getUsername());
+
+        mEmail = (TextView) findViewById(R.id.email);
+        mEmail.setText(mUser.getEmail());
     }
 
     @Override
@@ -82,7 +84,7 @@ public class ProfileActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         if (id == R.id.action_add) {
-            Intent i = NewStudyEvent.newIntentStudy(ProfileActivity.this, mUser.getUsername());
+            Intent i = NewStudyEvent.newIntentStudy(ProfileActivity.this);
             startActivity(i);
             return true;
         }

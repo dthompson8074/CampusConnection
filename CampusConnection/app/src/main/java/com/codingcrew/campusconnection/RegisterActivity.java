@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -18,10 +19,10 @@ import android.widget.Toast;
 public class RegisterActivity extends AppCompatActivity {
 
     Button mButtonSend;
-    EditText mEmail, mPassword, mCPassword;
+    EditText mEmail, mPassword, mCPassword, mName;
     User mUser = User.getInstance();
 
-    public static Intent newIntentRegistor(Context packageContext) {
+    public static Intent newIntentRegister(Context packageContext) {
         Intent i = new Intent(packageContext, RegisterActivity.class);
         return i;
     }
@@ -32,8 +33,27 @@ public class RegisterActivity extends AppCompatActivity {
 
         mCPassword = (EditText) findViewById(R.id.confirmPassword);
         mPassword = (EditText) findViewById(R.id.registorPassword);
-        mEmail = (EditText) findViewById(R.id.registorEmail);
+        mEmail = (EditText) findViewById(R.id.registerEmail);
+        mName = (EditText) findViewById(R.id.registerName);
 
+
+        mName.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                mUser.setUsername(s.toString());
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
 
         mEmail.addTextChangedListener(new TextWatcher() {
             @Override
@@ -43,7 +63,7 @@ public class RegisterActivity extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                mUser.setUsername(s.toString());
+                mUser.setEmail(s.toString());
 
             }
 
@@ -92,10 +112,10 @@ public class RegisterActivity extends AppCompatActivity {
 
         mButtonSend.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Toast toast = Toast.makeText(getApplicationContext(), mUser.getUsername() + " " + mUser.getPassword(), Toast.LENGTH_LONG);
+                Toast toast = Toast.makeText(getApplicationContext(), "Your registration is completed. " + mUser.getUsername()
+                        + ". " + "We hope you enjoy our services.", Toast.LENGTH_LONG);
                 toast.show();
-                String name = mUser.getUsername();
-                Intent i = ProfileActivity.newIntent(RegisterActivity.this, name);
+                Intent i = FeedActivity.newIntentFeed(RegisterActivity.this);
                 startActivity(i);
             }
         });

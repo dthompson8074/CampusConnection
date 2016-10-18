@@ -25,10 +25,10 @@ public class EventData {
 
     public EventData() {
         mMaxpeople = MAX_PEOPLE;
-        mPrefix = "";
-        mCourse = "";
-        mlocation = "";
-        mInformation = "";
+        mPrefix = "#####";
+        mCourse = "Default";
+        mlocation = "Texas Tech";
+        mInformation = "Extra";
     }
 
     public String getMaxpeople() {

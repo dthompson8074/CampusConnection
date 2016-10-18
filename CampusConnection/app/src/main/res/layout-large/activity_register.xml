@@ -7,23 +7,23 @@
     android:layout_height="match_parent"
     android:background="@color/maroon"
     tools:context="com.codingcrew.campusconnection.RegisterActivity"
-
     android:id="@+id/activity_registor">
 
+
     <EditText
-        android:hint="@string/TTU_Email"
-        android:gravity="center_horizontal"
+        android:hint="@string/Confirm_Password"
         android:textColorHint="#979e9797"
+        android:gravity="center_horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textEmailAddress"
+        android:inputType="numberPassword"
         android:ems="10"
-        android:id="@+id/registorEmail"
-        android:background="#FFFFFFFF"
-        android:layout_marginBottom="119dp"
-        android:layout_above="@+id/registorPassword"
-        android:layout_centerHorizontal="true"
-        android:textColor="@android:color/black"/>
+        android:id="@+id/confirmPassword"
+        android:background="@drawable/textboxstyle1"
+        android:textColor="@android:color/black"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/registorPassword"
+        android:layout_alignStart="@+id/registorPassword"/>
 
     <Button
         android:text="@string/Submit"
@@ -36,19 +36,19 @@
         android:layout_centerHorizontal="true"/>
 
     <EditText
-        android:hint="@string/Confirm_Password"
-        android:textColorHint="#979e9797"
+        android:hint="@string/TTU_Email"
         android:gravity="center_horizontal"
+        android:textColorHint="#979e9797"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="numberPassword"
+        android:inputType="textEmailAddress"
         android:ems="10"
-        android:id="@+id/confirmPassword"
-        android:background="#FFFFFFFF"
-        android:layout_centerVertical="true"
-        android:layout_alignLeft="@+id/registorPassword"
-        android:layout_alignStart="@+id/registorPassword"
-        android:textColor="@android:color/black"/>
+        android:id="@+id/registerEmail"
+        android:background="@drawable/textboxstyle1"
+        android:layout_marginBottom="60dp"
+        android:textColor="@android:color/black"
+        android:layout_above="@+id/registorPassword"
+        android:layout_centerHorizontal="true"/>
 
     <EditText
         android:hint="@string/Password"
@@ -59,13 +59,27 @@
         android:inputType="numberPassword"
         android:ems="10"
         android:id="@+id/registorPassword"
-        android:background="#FFFFFFFF"
-        android:layout_marginBottom="125dp"
+        android:background="@drawable/textboxstyle1"
+        android:layout_marginBottom="62dp"
         android:textColor="@android:color/black"
         android:layout_above="@+id/confirmPassword"
-        android:layout_alignLeft="@+id/registorEmail"
-        android:layout_alignStart="@+id/registorEmail"
-        android:layout_marginLeft="8dp"
-        android:layout_marginStart="8dp"/>
+        android:layout_alignLeft="@+id/registerEmail"
+        android:layout_alignStart="@+id/registerEmail"/>
+
+    <EditText
+        android:hint="@string/Name"
+        android:textColorHint="#979e9797"
+        android:background="@drawable/textboxstyle1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/registerName"
+        android:layout_marginBottom="62dp"
+        android:gravity="center_horizontal"
+        android:layout_above="@+id/registerEmail"
+        android:layout_alignLeft="@+id/registerEmail"
+        android:layout_alignStart="@+id/registerEmail"
+        android:textColor="@color/black"/>
 
 </RelativeLayout>

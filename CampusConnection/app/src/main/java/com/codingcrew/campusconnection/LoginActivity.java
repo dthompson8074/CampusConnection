@@ -73,9 +73,8 @@ public class LoginActivity extends AppCompatActivity {
         mButtonLogin.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
-                Toast toast = Toast.makeText(getApplicationContext(), "Welcome " + mUser.getUsername() +
-                        " " + mUser.getPassword()
-                        , Toast.LENGTH_LONG);
+                Toast toast = Toast.makeText(getApplicationContext(), "Welcome " + mUser.getUsername()
+                        , Toast.LENGTH_SHORT);
                 toast.show();
 
                 String name = mUser.getUsername();
@@ -88,9 +87,10 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
 
 
-                Toast toast = Toast.makeText(getApplicationContext(), "Thank you for using our services", Toast.LENGTH_LONG);
+                Toast toast = Toast.makeText(getApplicationContext(), "Thank you for registering for " +
+                        "our services", Toast.LENGTH_LONG);
                 toast.show();
-                Intent i = RegisterActivity.newIntentRegistor(LoginActivity.this);
+                Intent i = RegisterActivity.newIntentRegister(LoginActivity.this);
                 startActivity(i);
 
             }

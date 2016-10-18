@@ -15,7 +15,7 @@
         android:theme="@style/AppTheme2">
         <activity android:name=".LoginActivity"
                   android:screenOrientation="portrait"
-                  android:windowSoftInputMode="stateHidden|adjustResize">
+                  android:windowSoftInputMode="stateHidden|adjustPan">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -27,24 +27,25 @@
             android:label="@string/ProfileActivityTitle"
             android:theme="@style/AppTheme"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateHidden|adjustResize">
+            android:windowSoftInputMode="stateHidden|adjustPan">
         </activity>
         <activity
             android:name=".NewStudyEvent"
             android:label="@string/title_newStudyEvent_activity"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateHidden|adjustResize">
+            android:windowSoftInputMode="stateHidden">
         </activity>
         <activity
             android:name=".RegisterActivity"
             android:label="@string/title_Register_Activity"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateHidden|adjustResize">
+            android:windowSoftInputMode="stateHidden|adjustPan">
         </activity>
        <activity
            android:name=".FeedActivity"
+           android:label="Feed"
            android:screenOrientation="portrait"
-           android:windowSoftInputMode="stateHidden|adjustResize">
+           android:windowSoftInputMode="stateHidden|adjustPan">
         </activity>
     </application>
 

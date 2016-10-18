@@ -10,6 +10,7 @@ import android.view.MenuItem;
 public class FeedActivity extends AppCompatActivity {
 
     User mUser = User.getInstance();
+
     public static Intent newIntentFeed(Context packageContext) {
         Intent i = new Intent(packageContext, FeedActivity.class);
         return i;
@@ -30,21 +31,25 @@ public class FeedActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
 
-        if (id == R.id.profile) {
+        Intent i;
+        switch (item.getItemId()) {
 
-            Intent i = ProfileActivity.newIntent(FeedActivity.this, mUser.getUsername() );
-            startActivity(i);
-            return true;
-        } else if (id == R.id.createEventPage){
+            case R.id.profile:
 
-            Intent i = NewStudyEvent.newIntentStudy(FeedActivity.this, mUser.getUsername());
-            startActivity(i);
-            return true;
+                i = ProfileActivity.newIntent(FeedActivity.this);
+                startActivity(i);
+                return true;
 
+            case R.id.createEventPage:
+
+                i = NewStudyEvent.newIntentStudy(FeedActivity.this);
+                startActivity(i);
+                return true;
+
+
+            default:
+            return super.onOptionsItemSelected(item);
         }
-
-        return super.onOptionsItemSelected(item);
     }
 }

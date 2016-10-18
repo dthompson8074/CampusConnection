@@ -54,13 +54,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/ProfileName"
-                    android:textSize="24sp"/>
+                    android:textSize="24sp"
+                    android:text="@string/username"/>
 
                 <TextView
-                    android:text="TextView"
+                    android:text="@string/TTU_Email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="24sp"/>
+                    android:textSize="24sp"
+                    android:id="@+id/email"/>
             </LinearLayout>
         </LinearLayout>
 
@@ -88,7 +90,7 @@
                 android:layout_height="fill_parent"
                 android:layout_below="@id/tab_layout"/>
 
-            </FrameLayout>
+        </FrameLayout>
     </LinearLayout>
 
 </RelativeLayout>

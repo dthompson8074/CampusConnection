@@ -10,7 +10,16 @@ public class User {
     private static User sUserClass;
 
     private String mUsername;
+    private String mEmail;
     private String mPassword;
+
+    public String getPassword() {
+        return mPassword;
+    }
+
+    public void setPassword(String password) {
+        mPassword = password;
+    }
 
     public static User getInstance() {
         if(sUserClass == null) {
@@ -21,8 +30,9 @@ public class User {
         return sUserClass;
     }
     private User(){
+        mEmail = "Default@ttu.edu";
+        mUsername = "Default";
         mPassword = "";
-        mUsername = "";
     }
 
     public String getUsername() {
@@ -33,11 +43,11 @@ public class User {
         mUsername = username;
     }
 
-    public String getPassword() {
-        return mPassword;
+    public String getEmail() {
+        return mEmail;
     }
 
-    public void setPassword(String password) {
-        mPassword = password;
+    public void setEmail(String email) {
+        mEmail = email;
     }
 }
