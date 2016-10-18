@@ -14,14 +14,14 @@ public class LoginActivity extends AppCompatActivity {
 
     Button mButtonLogin, mButtonRegister;
     EditText mUsername, mPassword;
-    User mUser;
+    User mUser = User.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(com.codingcrew.campusconnection.R.layout.activity_login);
 
-        mUser = new User();
+
 
         //Link the activity_login.xml attributes to current activity
         mUsername = (EditText) findViewById(R.id.textViewUsername);
@@ -79,7 +79,7 @@ public class LoginActivity extends AppCompatActivity {
                 toast.show();
 
                 String name = mUser.getUsername();
-                Intent i = ProfileActivity.newIntent(LoginActivity.this, name);
+                Intent i = FeedActivity.newIntentFeed(LoginActivity.this);
                 startActivity(i);
             }
         });

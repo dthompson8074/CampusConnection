@@ -19,7 +19,7 @@ public class RegisterActivity extends AppCompatActivity {
 
     Button mButtonSend;
     EditText mEmail, mPassword, mCPassword;
-    User mUser = new User();
+    User mUser = User.getInstance();
 
     public static Intent newIntentRegistor(Context packageContext) {
         Intent i = new Intent(packageContext, RegisterActivity.class);

@@ -29,22 +29,35 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="18dp"
+        android:id="@+id/textViewUsername"
+        android:textSize="20sp"
+        android:hint="@string/username"
+        android:width="250dp"
+        android:background="#FFFFFFFF"
+        android:textColorHint="#979e9797"
+        android:textColor="@android:color/black"
+        android:layout_above="@+id/textViewPassword"
+        android:layout_centerHorizontal="true"
+        android:inputType="text"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:id="@+id/textViewPassword"
         android:textSize="20sp"
-        android:layout_centerVertical="true"
-        android:layout_alignRight="@+id/textViewUsername"
-        android:layout_alignEnd="@+id/textViewUsername"
-        android:hint="Password"
-        android:layout_alignLeft="@+id/textViewUsername"
-        android:layout_alignStart="@+id/textViewUsername"
+        android:hint="@string/password"
         android:width="250dp"
         android:textColorHint="#979e9797"
         android:background="#FFFFFFFF"
         android:textColor="@android:color/black"
-        android:inputType="text|textPassword"/>
+        android:inputType="textPassword"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/textViewUsername"
+        android:layout_alignStart="@+id/textViewUsername"/>
 
     <Button
-        android:text="Login"
+        android:text="@string/login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/buttonLogin"
@@ -54,23 +67,10 @@
         android:layout_alignLeft="@+id/buttonRegister"
         android:layout_alignStart="@+id/buttonRegister"/>
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="18dp"
-        android:id="@+id/textViewUsername"
-        android:textSize="20sp"
-        android:hint="Username"
-        android:width="250dp"
-        android:background="#FFFFFFFF"
-        android:textColorHint="#979e9797"
-        android:textColor="@android:color/black"
-        android:layout_above="@+id/textViewPassword"
-        android:layout_centerHorizontal="true"
-        android:inputType="text"/>
+
 
     <Button
-        android:text="Register"
+        android:text="@string/register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/buttonRegister"

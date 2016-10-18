@@ -9,11 +9,11 @@ import android.view.MenuItem;
 
 public class FeedActivity extends AppCompatActivity {
 
-    /*public static Intent newIntentFeed(Context packageContext, String mName) {
-        Intent i = new Intent(packageContext, ProfileActivity.class);
-        i.putExtra(EXTRA_Name, mName);
+    User mUser = User.getInstance();
+    public static Intent newIntentFeed(Context packageContext) {
+        Intent i = new Intent(packageContext, FeedActivity.class);
         return i;
-    }*/
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,14 +33,14 @@ public class FeedActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         if (id == R.id.profile) {
-            String name = "hello";
-            Intent i = ProfileActivity.newIntent(FeedActivity.this, name);
+
+            Intent i = ProfileActivity.newIntent(FeedActivity.this, mUser.getUsername() );
             startActivity(i);
             return true;
         } else if (id == R.id.createEventPage){
-            /*String name = "hello";
-            Intent i = ProfileActivity.newIntent(FeedActivity.this, name);
-            startActivity(i);*/
+
+            Intent i = NewStudyEvent.newIntentStudy(FeedActivity.this, mUser.getUsername());
+            startActivity(i);
             return true;
 
         }

@@ -20,6 +20,7 @@ public class ProfileActivity extends AppCompatActivity {
 
     private static final String EXTRA_Name =
             "com.codingcrew.campusconnection.name";
+    User mUser = User.getInstance();
 
     public static Intent newIntent(Context packageContext, String mName) {
         Intent i = new Intent(packageContext, ProfileActivity.class);
@@ -81,7 +82,7 @@ public class ProfileActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         if (id == R.id.action_add) {
-            Intent i = new Intent(ProfileActivity.this, NewStudyEvent.class);
+            Intent i = NewStudyEvent.newIntentStudy(ProfileActivity.this, mUser.getUsername());
             startActivity(i);
             return true;
         }

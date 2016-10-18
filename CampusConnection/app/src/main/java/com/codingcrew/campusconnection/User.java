@@ -7,11 +7,20 @@ import java.util.List;
  */
 
 public class User {
+    private static User sUserClass;
 
     private String mUsername;
     private String mPassword;
 
-    User(){
+    public static User getInstance() {
+        if(sUserClass == null) {
+            sUserClass = new User();
+
+        }
+
+        return sUserClass;
+    }
+    private User(){
         mPassword = "";
         mUsername = "";
     }

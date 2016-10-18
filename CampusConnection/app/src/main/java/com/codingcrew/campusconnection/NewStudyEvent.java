@@ -15,6 +15,10 @@ import android.widget.Toast;
 
 public class NewStudyEvent extends AppCompatActivity {
 
+    private static final String EXTRA_Name =
+            "com.codingcrew.campusconnection.name";
+    User mUser = User.getInstance();
+
     EditText mLocation, mExtraInfo, mCoursePrefix, mCourseNumber,
              mMaxResponse;
     CheckBox mPay;
