@@ -7,10 +7,13 @@ using System.Text;
 
 namespace CCS
 {
-    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "INewUser" in both code and config file together.
+    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "Iaccmgr" in both code and config file together.
     [ServiceContract]
-    public interface INewUser
+    public interface Iaccmgr
     {
+        [OperationContract]
+        Account DoLogin(string email, string password);
+
         [OperationContract]
         int CreateAccount(string email, string password, string fullname);
     }

@@ -7,10 +7,27 @@ using System.Text;
 
 namespace CCS
 {
-    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "NewUser" in code, svc and config file together.
-    // NOTE: In order to launch WCF Test Client for testing this service, please select NewUser.svc or NewUser.svc.cs at the Solution Explorer and start debugging.
-    public class NewUser : INewUser
+    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "accmgr" in code, svc and config file together.
+    // NOTE: In order to launch WCF Test Client for testing this service, please select accmgr.svc or accmgr.svc.cs at the Solution Explorer and start debugging.
+    public class accmgr : Iaccmgr
     {
+        public Account DoLogin(string email, string password)
+        {
+            try
+            {
+                CampusConnectionEntities context = new CampusConnectionEntities();
+                return (from a in context.Accounts where a.Email == email && a.Password == password select a).SingleOrDefault();
+            }
+            catch (Exception e)
+            {
+                using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"D:\errlog.txt", true))
+                {
+                    file.WriteLine(e.Message);
+                }
+                return null;
+            }
+        }
+
         public int CreateAccount(string email, string password, string fullname)
         {
             // return an ID if an account has been created successfully

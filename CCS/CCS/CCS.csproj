@@ -71,6 +71,7 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="accmgr.svc" />
     <Content Include="CampusConnectionEntities.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>CampusConnectionEntities.edmx</DependentUpon>
@@ -81,11 +82,12 @@
       <DependentUpon>CampusConnectionEntities.edmx</DependentUpon>
       <LastGenOutput>CampusConnectionEntities.cs</LastGenOutput>
     </Content>
-    <Content Include="Login.svc" />
-    <Content Include="NewUser.svc" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="accmgr.svc.cs">
+      <DependentUpon>accmgr.svc</DependentUpon>
+    </Compile>
     <Compile Include="Account.cs">
       <DependentUpon>CampusConnectionEntities.tt</DependentUpon>
     </Compile>
@@ -110,14 +112,7 @@
     <Compile Include="Event.cs">
       <DependentUpon>CampusConnectionEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="ILogin.cs" />
-    <Compile Include="INewUser.cs" />
-    <Compile Include="Login.svc.cs">
-      <DependentUpon>Login.svc</DependentUpon>
-    </Compile>
-    <Compile Include="NewUser.svc.cs">
-      <DependentUpon>NewUser.svc</DependentUpon>
-    </Compile>
+    <Compile Include="Iaccmgr.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
