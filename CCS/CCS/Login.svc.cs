@@ -21,7 +21,6 @@ namespace CCS
             {
                 CampusConnectionEntities context = new CampusConnectionEntities();
                 return (from a in context.Accounts where a.Email == email && a.Password == password select a).SingleOrDefault();
-                //return new Account();
             }
             catch (Exception e)
             {                
