@@ -73,14 +73,13 @@
   <ItemGroup>
     <Content Include="CampusConnectionEntities.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>CampusConnectionEntities.Context.cs</LastGenOutput>
       <DependentUpon>CampusConnectionEntities.edmx</DependentUpon>
+      <LastGenOutput>CampusConnectionEntities.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="CampusConnectionEntities.edmx.sql" />
     <Content Include="CampusConnectionEntities.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>CampusConnectionEntities.cs</LastGenOutput>
       <DependentUpon>CampusConnectionEntities.edmx</DependentUpon>
+      <LastGenOutput>CampusConnectionEntities.cs</LastGenOutput>
     </Content>
     <Content Include="Login.svc" />
     <Content Include="NewUser.svc" />
@@ -125,6 +124,7 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="packages.config" />
     <EntityDeploy Include="CampusConnectionEntities.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>CampusConnectionEntities.Designer.cs</LastGenOutput>
@@ -132,7 +132,6 @@
     <Content Include="CampusConnectionEntities.edmx.diagram">
       <DependentUpon>CampusConnectionEntities.edmx</DependentUpon>
     </Content>
-    <Content Include="packages.config" />
     <None Include="Properties\PublishProfiles\Debug.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

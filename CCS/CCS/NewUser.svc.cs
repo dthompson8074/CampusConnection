@@ -20,7 +20,7 @@ namespace CCS
 
             try
             {
-                CampusConnectionEntitiesContainer context = new CCS.CampusConnectionEntitiesContainer();
+                CampusConnectionEntities context = new CampusConnectionEntities();
 
                 // if the email exists, return an error
                 Account checkAcc = (from a in context.Accounts where a.Email == email select a).SingleOrDefault();

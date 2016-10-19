@@ -17,8 +17,20 @@ namespace CCS
 
         public Account DoLogin(string email, string password)
         {
-            CampusConnectionEntitiesContainer context = new CCS.CampusConnectionEntitiesContainer();
-            return (from a in context.Accounts where a.Email == email && a.Password == password select a).SingleOrDefault();            
+            try
+            {
+                CampusConnectionEntities context = new CampusConnectionEntities();
+                return (from a in context.Accounts where a.Email == email && a.Password == password select a).SingleOrDefault();
+                //return new Account();
+            }
+            catch (Exception e)
+            {                
+                using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"D:\errlog.txt", true))
+                {
+                    file.WriteLine(e.Message);
+                }
+                return null;
+            }
         }        
     }
 }

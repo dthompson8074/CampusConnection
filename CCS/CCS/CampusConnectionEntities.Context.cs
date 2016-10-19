@@ -13,10 +13,10 @@ namespace CCS
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class CampusConnectionEntitiesContainer : DbContext
+    public partial class CampusConnectionEntities : DbContext
     {
-        public CampusConnectionEntitiesContainer()
-            : base("name=CampusConnectionEntitiesContainer")
+        public CampusConnectionEntities()
+            : base("name=CampusConnectionEntities")
         {
         }
     
@@ -26,7 +26,7 @@ namespace CCS
         }
     
         public virtual DbSet<Account> Accounts { get; set; }
-        public virtual DbSet<Event> Events { get; set; }
         public virtual DbSet<Course> Courses { get; set; }
+        public virtual DbSet<Event> Events { get; set; }
     }
 }
