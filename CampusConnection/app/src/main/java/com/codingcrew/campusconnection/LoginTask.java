@@ -2,8 +2,7 @@ package com.codingcrew.campusconnection;
 
 import android.os.AsyncTask;
 
-import com.codingcrew.webservices.Account;
-import com.codingcrew.webservices.Login;
+import com.codingcrew.webservices.accmgr.*;
 
 /**
  * Created by Quan on 10/18/2016.
@@ -12,7 +11,7 @@ import com.codingcrew.webservices.Login;
 public class LoginTask extends AsyncTask<String, Void, Account> {
     @Override
     protected Account doInBackground(String... params) {
-        Login loginSrv = new Login();
+        accmgr loginSrv = new accmgr();
         Account acc =  loginSrv.DoLogin(params[1], params[2]);
         return  acc;
     }

@@ -12,8 +12,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-import com.codingcrew.webservices.*;
-import com.codingcrew.webservices.Account;
+import com.codingcrew.webservices.accmgr.Account;
 
 import java.util.concurrent.ExecutionException;
 
@@ -82,7 +81,7 @@ public class LoginActivity extends AppCompatActivity {
 
                 String name = mUser.getUsername();
                 String password = mUser.getPassword();
-                String[] params = {"http://129.118.70.18/cc_ws/Login.svc?wsdl", name, password};
+                String[] params = {"http://129.118.70.18/cc_ws/accmgr.svc?wsdl", name, password};
                 AsyncTask<String, Void, Account> t = new LoginTask().execute(params);
                 try {
                     Account acc = t.get();
