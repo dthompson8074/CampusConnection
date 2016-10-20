@@ -2,7 +2,7 @@ package com.codingcrew.campusconnection;
 
 import android.os.AsyncTask;
 
-import com.codingcrew.webservices.accmgr.*;
+import com.codingcrew.campusconnection.webservices.accmgr.*;
 
 /**
  * Created by Quan on 10/18/2016.

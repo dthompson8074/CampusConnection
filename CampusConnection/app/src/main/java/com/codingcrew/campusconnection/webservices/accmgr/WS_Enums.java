@@ -1,4 +1,4 @@
-package com.codingcrew.webservices.accmgr;
+package com.codingcrew.campusconnection.webservices.accmgr;
 
 //------------------------------------------------------------------------------
 // <wsdl2code-generated>

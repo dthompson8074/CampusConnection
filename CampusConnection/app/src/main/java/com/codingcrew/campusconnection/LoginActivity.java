@@ -3,7 +3,6 @@ package com.codingcrew.campusconnection;
 import android.accounts.*;
 import android.content.Intent;
 import android.os.AsyncTask;
-import android.os.StrictMode;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
@@ -12,7 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-import com.codingcrew.webservices.accmgr.Account;
+import com.codingcrew.campusconnection.webservices.accmgr.Account;
 
 import java.util.concurrent.ExecutionException;
 
@@ -21,7 +20,7 @@ import okhttp3.Response;
 public class LoginActivity extends AppCompatActivity {
 
     Button mButtonLogin, mButtonRegister;
-    EditText mUsername, mPassword;
+    EditText Username, mPassword;
     User mUser = User.getInstance();
 
     @Override
@@ -29,12 +28,14 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(com.codingcrew.campusconnection.R.layout.activity_login);
 
+
+
         //Link the activity_login.xml attributes to current activity
-        mUsername = (EditText) findViewById(R.id.textViewUsername);
+        Username = (EditText) findViewById(R.id.textViewUsername);
         mPassword = (EditText) findViewById(R.id.textViewPassword);
 
         //Store the user name into a string variable
-        mUsername.addTextChangedListener(new TextWatcher() {
+        Username.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -52,7 +53,7 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-      // Store the user password into a string variable
+        // Store the user password into a string variable
         mPassword.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -94,6 +95,7 @@ public class LoginActivity extends AppCompatActivity {
                         Toast toast = Toast.makeText(getApplicationContext(), "Welcome " + acc.fullName
                                 , Toast.LENGTH_LONG);
                         toast.show();
+                        mUser.setUsername(acc.fullName);
                     }
                 } catch (InterruptedException e) {
                     e.printStackTrace();
@@ -103,23 +105,26 @@ public class LoginActivity extends AppCompatActivity {
 
                 // --- Quan commented out temporarily to test calling webservice --- start ---------
                 Intent i = FeedActivity.newIntentFeed(LoginActivity.this);
+
                 startActivity(i);
                 // --- Quan ------------------------------------------------------ end -------------
             }
         });
-
         mButtonRegister.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+
 
                 Toast toast = Toast.makeText(getApplicationContext(), "Thank you for registering for " +
                         "our services", Toast.LENGTH_LONG);
                 toast.show();
                 Intent i = RegisterActivity.newIntentRegister(LoginActivity.this);
+
                 startActivity(i);
 
             }
         });
     }
+
 }
 
 

@@ -45,13 +45,13 @@ public class RegisterActivity extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                mUser.setUsername(s.toString());
+
 
             }
 
             @Override
             public void afterTextChanged(Editable s) {
-
+                mUser.setUsername(s.toString());
             }
         });
 
@@ -120,4 +120,5 @@ public class RegisterActivity extends AppCompatActivity {
             }
         });
     }
+
 }
