@@ -160,7 +160,15 @@ public class NewStudyEvent extends AppCompatActivity {
                         + ". Additional information is: " + mEvent.getInformation()
                         , Toast.LENGTH_LONG);
                 toast.show();
+                ResetText();
             }
         });
+    }
+    private void ResetText(){
+        mLocation.setText(null);
+        mExtraInfo.setText(null);
+        mCoursePrefix.setText(null);
+        mCourseNumber.setText(null);
+        mMaxResponse.setText(null);
     }
 }

@@ -15,13 +15,13 @@ public class EventData {
     private String mInformation;
     private boolean mPayed;
 
-    public boolean getPayed() {
+   /* public boolean getPayed() {
         return mPayed;
     }
 
     public void setPayed(boolean payed) {
         mPayed = payed;
-    }
+    }*/
 
     public EventData() {
         mMaxpeople = MAX_PEOPLE;

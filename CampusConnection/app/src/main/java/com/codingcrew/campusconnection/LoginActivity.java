@@ -102,6 +102,7 @@ public class LoginActivity extends AppCompatActivity {
                 }
 
                 // --- Quan commented out temporarily to test calling webservice --- start ---------
+                ResetText();
                 Intent i = FeedActivity.newIntentFeed(LoginActivity.this);
                 startActivity(i);
                 // --- Quan ------------------------------------------------------ end -------------
@@ -114,11 +115,17 @@ public class LoginActivity extends AppCompatActivity {
                 Toast toast = Toast.makeText(getApplicationContext(), "Thank you for registering for " +
                         "our services", Toast.LENGTH_LONG);
                 toast.show();
+                ResetText();
                 Intent i = RegisterActivity.newIntentRegister(LoginActivity.this);
                 startActivity(i);
 
             }
         });
+    }
+
+    private void ResetText() {
+        mUsername.setText(null);
+        mPassword.setText(null);
     }
 }
 
