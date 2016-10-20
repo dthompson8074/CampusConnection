@@ -45,13 +45,13 @@ public class RegisterActivity extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                mUser.setUsername(s.toString());
+
 
             }
 
             @Override
             public void afterTextChanged(Editable s) {
-
+                mUser.setUsername(s.toString());
             }
         });
 
@@ -115,17 +115,10 @@ public class RegisterActivity extends AppCompatActivity {
                 Toast toast = Toast.makeText(getApplicationContext(), "Your registration is completed. " + mUser.getUsername()
                         + ". " + "We hope you enjoy our services.", Toast.LENGTH_LONG);
                 toast.show();
-                ResetText();
                 Intent i = FeedActivity.newIntentFeed(RegisterActivity.this);
                 startActivity(i);
             }
         });
     }
 
-    private void ResetText(){
-        mEmail.setText(null);
-        mPassword.setText(null);
-        mCPassword.setText(null);
-        mName.setText(null);
-    }
 }

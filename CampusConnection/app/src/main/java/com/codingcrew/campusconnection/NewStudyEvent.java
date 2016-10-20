@@ -16,8 +16,8 @@ import android.widget.Toast;
 public class NewStudyEvent extends AppCompatActivity {
 
     EditText mLocation, mExtraInfo, mCoursePrefix, mCourseNumber,
-             mMaxResponse;
-   // CheckBox mPay;
+            mMaxResponse;
+    // CheckBox mPay;
     Button mCreateButton;
     EventData mEvent = new EventData();
 
@@ -36,7 +36,7 @@ public class NewStudyEvent extends AppCompatActivity {
         mCourseNumber = (EditText) findViewById(R.id.courseNumber);
         mCoursePrefix = (EditText) findViewById(R.id.coursePrefix);
         mMaxResponse = (EditText) findViewById(R.id.maxResponders);
-       // mPay = (CheckBox) findViewById(R.id.payBox);
+        // mPay = (CheckBox) findViewById(R.id.payBox);
 
         /* Enable the user to choose a Course Prefix*/
 
@@ -155,20 +155,14 @@ public class NewStudyEvent extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast toast = Toast.makeText(getApplicationContext(), "Event created for " + mEvent.getPrefix() +
-                        " " + mEvent.getCourse() + ". " + "The maximum number of people is " +
-                        mEvent.getMaxpeople() + " and the location is at " + mEvent.getlocation()
-                        + ". Additional information is: " + mEvent.getInformation()
+                                " " + mEvent.getCourse() + ". " + "The maximum number of people is " +
+                                mEvent.getMaxpeople() + " and the location is at " + mEvent.getlocation()
+                                + ". Additional information is: " + mEvent.getInformation()
                         , Toast.LENGTH_LONG);
                 toast.show();
-                ResetText();
+
             }
         });
     }
-    private void ResetText(){
-        mLocation.setText(null);
-        mExtraInfo.setText(null);
-        mCoursePrefix.setText(null);
-        mCourseNumber.setText(null);
-        mMaxResponse.setText(null);
-    }
+
 }

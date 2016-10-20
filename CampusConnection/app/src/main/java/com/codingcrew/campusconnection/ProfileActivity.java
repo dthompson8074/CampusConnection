@@ -1,19 +1,19 @@
 package com.codingcrew.campusconnection;
 
 
-        import android.content.Context;
-        import android.content.Intent;
-        import android.os.Bundle;
-        import android.support.design.widget.TabLayout;
-        import android.support.v4.view.ViewPager;
-        import android.support.v7.app.AppCompatActivity;
-        import android.support.v7.widget.Toolbar;
-        import android.view.Menu;
-        import android.view.MenuItem;
-        import android.widget.TextView;
+import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.design.widget.TabLayout;
+import android.support.v4.view.ViewPager;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.TextView;
 
-        import com.codingcrew.campusconnection.R;
-        import com.codingcrew.campusconnection.tabs.PagerAdapter;
+import com.codingcrew.campusconnection.R;
+import com.codingcrew.campusconnection.tabs.PagerAdapter;
 
 
 public class ProfileActivity extends AppCompatActivity {

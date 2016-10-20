@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.codingcrew.campusconnection"
 
->
+    >
     <!-- Internet permission -->
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -42,11 +42,11 @@
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden|adjustPan">
         </activity>
-       <activity
-           android:name=".FeedActivity"
-           android:label="Feed"
-           android:screenOrientation="portrait"
-           android:windowSoftInputMode="stateHidden|adjustPan">
+        <activity
+            android:name=".FeedActivity"
+            android:label="Feed"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan">
         </activity>
     </application>
 

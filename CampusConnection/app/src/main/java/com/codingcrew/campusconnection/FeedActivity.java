@@ -49,7 +49,7 @@ public class FeedActivity extends AppCompatActivity {
 
 
             default:
-            return super.onOptionsItemSelected(item);
+                return super.onOptionsItemSelected(item);
         }
     }
 }

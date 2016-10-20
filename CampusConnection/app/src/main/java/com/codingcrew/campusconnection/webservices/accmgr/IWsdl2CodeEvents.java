@@ -1,4 +1,4 @@
-package com.codingcrew.webservices.accmgr;
+package com.codingcrew.campusconnection.webservices.accmgr;
 
 //------------------------------------------------------------------------------
 // <wsdl2code-generated>
@@ -15,7 +15,7 @@ package com.codingcrew.webservices.accmgr;
 
 public interface IWsdl2CodeEvents {
     public void Wsdl2CodeStartedRequest();
-    public void Wsdl2CodeFinished(String methodName,Object Data);
+    public void Wsdl2CodeFinished(String methodName, Object Data);
     public void Wsdl2CodeFinishedWithException(Exception ex);
     public void Wsdl2CodeEndedRequest();
 }
