@@ -16,4 +16,9 @@
         UpdateMethod="GridViewAccounts_UpdateItem"
         DeleteMethod="GridViewAccounts_DeleteItem" OnRowUpdating="GridViewAccounts_RowUpdating"></asp:GridView>
     
+    <br />
+    <br />
+    <div class="pagination-centered">
+        <asp:Button ID="btnGoBack" runat="server" Text="Go Back" CssClass="btn btn-success" OnClick="btnGoBack_Click" />
+    </div>
 </asp:Content>

@@ -76,6 +76,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\image.css" />
+    <Content Include="img\cc.png" />
     <Content Include="packages.config" />
     <Content Include="Default.Master" />
     <EntityDeploy Include="CampusConnectionModel.edmx">

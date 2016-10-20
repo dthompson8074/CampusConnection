@@ -62,5 +62,10 @@ namespace DB_Interface
             editedPassword = e.NewValues[2].ToString().Trim();
             editedFullName = e.NewValues[3].ToString().Trim();
         }
+
+        protected void btnGoBack_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Index.aspx");
+        }
     }
 }

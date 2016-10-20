@@ -13,5 +13,10 @@ namespace DB_Interface
         {
 
         }
+
+        protected void btnGoBack_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Index.aspx");
+        }
     }
 }
