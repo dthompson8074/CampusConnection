@@ -1,0 +1,13 @@
+﻿.table {
+    width:auto;
+    margin-bottom: auto;
+    margin: 0 auto;
+}
+.table th {
+    border-top:initial;
+    background-color:lightgrey;
+}
+
+.table td {
+    border-top:initial;
+}
