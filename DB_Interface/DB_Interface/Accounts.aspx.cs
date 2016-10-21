@@ -42,6 +42,7 @@ namespace DB_Interface
             context.SaveChanges();
             lblMsg.Text = "Changes saved!";
             divMsg.Visible = true;
+            EnableButtons(true);
         }
 
         // The id parameter name should match the DataKeyNames value set on the control
@@ -66,6 +67,21 @@ namespace DB_Interface
         protected void btnGoBack_Click(object sender, EventArgs e)
         {
             Response.Redirect("~/Index.aspx");
+        }
+
+        protected void GridViewAccounts_RowEditing(object sender, GridViewEditEventArgs e)
+        {
+            EnableButtons(false);
+        }
+
+        protected void GridViewAccounts_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
+        {
+            EnableButtons(true);
+        }
+
+        private void EnableButtons(bool enabled)
+        {            
+            btnGoBack.Visible = enabled;
         }
     }
 }

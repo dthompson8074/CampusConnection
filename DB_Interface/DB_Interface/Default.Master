@@ -19,6 +19,7 @@
     <link href="css/table.css" rel="stylesheet" />
     <link href="css/message.css" rel="stylesheet" />
     <link href="css/image.css" rel="stylesheet" />
+    <link href="css/form.css" rel="stylesheet" />
 </head>
 <body>
     <form id="form1" runat="server">

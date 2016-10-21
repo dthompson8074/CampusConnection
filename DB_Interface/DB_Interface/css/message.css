@@ -2,3 +2,8 @@
     text-align:center;
     font-weight: bolder;
 }
+
+.notice {
+    font-weight: bold;
+    color: red;
+}

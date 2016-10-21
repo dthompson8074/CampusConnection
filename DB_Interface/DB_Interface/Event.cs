@@ -17,8 +17,8 @@ namespace DB_Interface
         public int Id { get; set; }
         public int Creator { get; set; }
         public string Subject { get; set; }
-        public Nullable<System.DateTime> StartTime { get; set; }
-        public Nullable<System.DateTime> EndTime { get; set; }
+        public string StartTime { get; set; }
+        public string EndTime { get; set; }
         public Nullable<byte> MaxResponders { get; set; }
         public string Location { get; set; }
         public string ExtraInfo { get; set; }
