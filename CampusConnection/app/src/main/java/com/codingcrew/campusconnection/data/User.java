@@ -1,6 +1,4 @@
-package com.codingcrew.campusconnection;
-
-import java.util.List;
+package com.codingcrew.campusconnection.data;
 
 /**
  * Created by Saul on 9/25/2016.

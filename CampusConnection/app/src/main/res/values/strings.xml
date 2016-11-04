@@ -22,4 +22,23 @@
     <string name="would_you_like_to_create_an_event">Would you like to Create an Event?</string>
     <string name="what_is_happening_this_week">What is happening this week?</string>
     <string name="expand_your_world_let_s_meet_new_people">Expand your world, meet new people.</string>
+
+
+        <string-array name="course_name">
+            <item>MATH 1451 - Calculus 1 With Applications</item>
+            <item>MATH 2360 - Linear Algebra</item>
+            <item>MATH 1550 - Precalculus</item>
+            <item>MATH 1420 - College Algebra With Review</item>
+            <item>CS 1411 - Programming Principles 1</item>
+            <item>CS 2413 - Data Structures</item>
+            <item>CS 1382 - Discrete Computational Structures</item>
+            <item>CS 3365 - Software Engineering 1</item>
+            <item>ENGL 1301 - Essentials of College Rhetoric</item>
+            <item>ENGL 1302 - Advanced College Rhetoric</item>
+            <item>ENGL 2305 - Introduction to Poetry</item>
+            <item>ENGL 2306 - Introduction to Drama</item>
+            <item>PHYS 1401 - Physics for Non-Science Majors</item>
+            <item>PHYS 1408 - Principles of Physics 1</item>
+            <item>ART 1309 - Art Appreciation</item>
+        </string-array>
 </resources>

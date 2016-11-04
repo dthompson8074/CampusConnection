@@ -1,6 +1,5 @@
 package com.codingcrew.campusconnection;
 
-import android.accounts.*;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
@@ -11,11 +10,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.codingcrew.campusconnection.data.User;
 import com.codingcrew.campusconnection.webservices.accmgr.Account;
 
 import java.util.concurrent.ExecutionException;
-
-import okhttp3.Response;
 
 public class LoginActivity extends AppCompatActivity {
 

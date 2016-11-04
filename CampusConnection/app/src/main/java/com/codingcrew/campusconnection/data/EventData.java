@@ -1,4 +1,6 @@
-package com.codingcrew.campusconnection;
+package com.codingcrew.campusconnection.data;
+
+import java.util.UUID;
 
 /**
  * Created by Saul on 10/14/2016.
@@ -14,6 +16,16 @@ public class EventData {
     private String mlocation;
     private String mInformation;
     private boolean mPayed;
+    private UUID mID;
+    private String mTitle;
+
+    public String getTitle() {
+        return mTitle;
+    }
+
+    public void setTitle(String title) {
+        mTitle = title;
+    }
 
     public boolean getPayed() {
         return mPayed;
@@ -26,9 +38,11 @@ public class EventData {
     public EventData() {
         mMaxpeople = MAX_PEOPLE;
         mPrefix = "#####";
-        mCourse = "Default";
+        mCourse = "CS";
         mlocation = "Texas Tech";
         mInformation = "Extra";
+        mID = UUID.randomUUID();
+        mTitle = "Study Event";
     }
 
     public String getMaxpeople() {
@@ -69,5 +83,13 @@ public class EventData {
 
     public void setInformation(String information) {
         mInformation = information;
+    }
+
+    public UUID getID() {
+        return mID;
+    }
+
+    public void setID(UUID ID) {
+        mID = ID;
     }
 }

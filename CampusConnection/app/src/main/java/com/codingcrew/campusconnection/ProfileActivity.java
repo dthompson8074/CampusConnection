@@ -12,7 +12,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
-import com.codingcrew.campusconnection.R;
+import com.codingcrew.campusconnection.data.User;
 import com.codingcrew.campusconnection.tabs.PagerAdapter;
 
 
