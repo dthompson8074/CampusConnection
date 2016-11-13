@@ -18,6 +18,24 @@ public class EventData {
     private boolean mPayed;
     private UUID mID;
     private String mTitle;
+    private String mTimeStart;
+    private String mTimeEnd;
+
+    public String getTimeStart() {
+        return mTimeStart;
+    }
+
+    public void setTimeStart(String timeStart) {
+        mTimeStart = timeStart;
+    }
+
+    public String getTimeEnd() {
+        return mTimeEnd;
+    }
+
+    public void setTimeEnd(String timeEnd) {
+        mTimeEnd = timeEnd;
+    }
 
     public String getTitle() {
         return mTitle;
@@ -43,6 +61,8 @@ public class EventData {
         mInformation = "Extra";
         mID = UUID.randomUUID();
         mTitle = "Study Event";
+        mTimeEnd = "12:00AM";
+        mTimeStart = "12:00AM";
     }
 
     public String getMaxpeople() {

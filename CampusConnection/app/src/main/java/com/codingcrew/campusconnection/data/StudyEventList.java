@@ -40,6 +40,16 @@ public class StudyEventList {
         }
         return null;
     }
+
+    public boolean getCopy(UUID id) {
+        for (EventData event : mStudyEvents) {
+            if (event.getID().equals(id)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     public void addNewItem(EventData event){
             mStudyEvents.add(event);
     }

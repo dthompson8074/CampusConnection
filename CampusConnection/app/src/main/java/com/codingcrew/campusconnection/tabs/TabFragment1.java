@@ -15,8 +15,6 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.codingcrew.campusconnection.FeedActivity;
-import com.codingcrew.campusconnection.NewStudyEvent;
 import com.codingcrew.campusconnection.R;
 import com.codingcrew.campusconnection.data.EventData;
 import com.codingcrew.campusconnection.data.StudyEventList;
@@ -76,7 +74,8 @@ private class TabFragment1Holder extends RecyclerView.ViewHolder implements View
 
     private EventData mEventData;
     private TextView mTitleTextView;
-    private TextView mCourseTextView;
+    private TextView mTimeStart;
+    private TextView mTimeEnd;
     private TextView mMaxpeopleTextView;
 
     //EventHolder(Constructor)
@@ -84,13 +83,11 @@ private class TabFragment1Holder extends RecyclerView.ViewHolder implements View
         super(itemView);
         itemView.setOnClickListener(this);
         mTitleTextView = (TextView) itemView.findViewById(R.id.mTitle);
-        mCourseTextView = (TextView) itemView.findViewById(R.id.mTime);
+        mTimeStart = (TextView) itemView.findViewById(R.id.mTimeStart);
+        mTimeEnd = (TextView) itemView.findViewById(R.id.mTineEnd);
         mMaxpeopleTextView = (TextView) itemView.findViewById(R.id.number_of_people);
-
-
     }
-
-    // Allows FeedActivity to start when ever a view is clicked.
+        // Allows FeedActivity to start when ever a view is clicked.
     @Override
     public void onClick(View v) {
         //TODO Delete Toast
@@ -105,11 +102,12 @@ private class TabFragment1Holder extends RecyclerView.ViewHolder implements View
     /*  bindEvent(EventData)
         Sets the data for each individual views
      */
-    public void bindEvent(EventData events) {
+    public void bindEvent(EventData events)  {
         mEventData = events;
-        mTitleTextView.setText(mEventData.getCourse());
-        mCourseTextView.setText("12:00");
+        mTitleTextView.setText(mEventData.getTitle());
+        mTimeStart.setText(mEventData.getTimeStart());
         mMaxpeopleTextView.setText(mEventData.getMaxpeople());
+        mTimeEnd.setText(mEventData.getTimeEnd());
     }
 }
 

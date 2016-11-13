@@ -88,7 +88,8 @@ public class FeedActivity extends AppCompatActivity {
 
         private EventData mEventData;
         private TextView mTitleTextView;
-        private TextView mCourseTextView;
+        private TextView mTimeStart;
+        private TextView mTimeEnd;
         private TextView mMaxpeopleTextView;
 
         //EventHolder(Constructor)
@@ -96,7 +97,8 @@ public class FeedActivity extends AppCompatActivity {
             super(itemView);
             itemView.setOnClickListener(this);
             mTitleTextView = (TextView) itemView.findViewById(R.id.mTitle);
-            mCourseTextView = (TextView) itemView.findViewById(R.id.mTime);
+            mTimeStart = (TextView) itemView.findViewById(R.id.mTimeStart);
+            mTimeEnd = (TextView) itemView.findViewById(R.id.mTineEnd);
             mMaxpeopleTextView = (TextView) itemView.findViewById(R.id.number_of_people);
 
 
@@ -119,9 +121,10 @@ public class FeedActivity extends AppCompatActivity {
          */
         public void bindEvent(EventData events) {
             mEventData = events;
-            mTitleTextView.setText(mEventData.getCourse());
-            mCourseTextView.setText("12:00");
+            mTitleTextView.setText(mEventData.getTitle());
+            mTimeStart.setText(mEventData.getTimeStart());
             mMaxpeopleTextView.setText(mEventData.getMaxpeople());
+            mTimeEnd.setText(mEventData.getTimeEnd());
         }
     }
 

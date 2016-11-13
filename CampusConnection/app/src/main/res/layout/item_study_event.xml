@@ -3,33 +3,69 @@
                 xmlns:tools="http://schemas.android.com/tools"
               android:orientation="vertical"
               android:layout_width="match_parent"
-              android:layout_height="wrap_content">
+              android:layout_height="wrap_content"
+                android:paddingTop="2dp"
+    >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/mTime"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        tools:text="Event Time"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/mTitle"
+            android:textSize="24sp"
+            tools:text="Event Title"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/mTime"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:id="@+id/number_of_people"
-        tools:text="Event people"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/mTitle"
-        android:textSize="24sp"
-        tools:text="Event Title"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/mTimeStart"
+            tools:text="Event Time"
+            android:layout_below="@+id/mTitle"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"/>
+
+        <TextView
+            android:text="Event Time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/mTineEnd"
+            android:layout_below="@+id/mTimeStart"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/number_of_people"
+            tools:text="##"
+            android:layout_alignBaseline="@+id/mTineEnd"
+            android:layout_alignBottom="@+id/mTineEnd"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:background="#c0c0c0"
+
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:text="Recipients"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView2"
+            android:layout_alignBaseline="@+id/number_of_people"
+            android:layout_alignBottom="@+id/number_of_people"
+            android:layout_toRightOf="@+id/number_of_people"
+            android:layout_toEndOf="@+id/number_of_people"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"/>
+
 </RelativeLayout>

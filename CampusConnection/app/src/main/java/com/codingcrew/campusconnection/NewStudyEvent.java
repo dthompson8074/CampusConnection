@@ -13,6 +13,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
+import android.view.View;
+import android.app.DialogFragment;
 
 import com.codingcrew.campusconnection.data.EventData;
 import com.codingcrew.campusconnection.data.StudyEventList;
@@ -23,10 +25,10 @@ public class NewStudyEvent extends AppCompatActivity{
 
     public static final String EXTRA_EVENT_ID = "com.codingcrew.campusconnection.event_id";
 
-    EditText mLocation, mExtraInfo, mCoursePrefix, mCourseNumber,
+    EditText mLocation, mExtraInfo,
             mMaxResponse;
     // CheckBox mPay;
-    Button mCreateButton;
+    Button mCreateButton, mBeginTime, mEndTime;
     EventData mEvent = new EventData();
 
     public static Intent newIntentStudy(Context packageContext) {
@@ -51,14 +53,20 @@ public class NewStudyEvent extends AppCompatActivity{
         }
         mLocation = (EditText) findViewById(R.id.textLocation);
         mExtraInfo = (EditText) findViewById(R.id.extraInfo);
-        mCourseNumber = (EditText) findViewById(R.id.courseNumber);
-        mCoursePrefix = (EditText) findViewById(R.id.coursePrefix);
+        mBeginTime = (Button) findViewById(R.id.beginTime);
         mMaxResponse = (EditText) findViewById(R.id.maxResponders);
+        mEndTime = (Button) findViewById(R.id.endTime);
+
+        mEndTime.setText(mEvent.getTimeEnd());
+        mBeginTime.setText(mEvent.getTimeStart());
+        mMaxResponse.setText(mEvent.getMaxpeople());
+        
+
         // mPay = (CheckBox) findViewById(R.id.payBox);
 
         /* Enable the user to choose a Course Prefix*/
 
-        mCoursePrefix.setText(mEvent.getCourse());
+     /*   mCoursePrefix.setText(mEvent.getCourse());
         mCoursePrefix.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -77,7 +85,7 @@ public class NewStudyEvent extends AppCompatActivity{
             }
         });
 
-        /* Enable the user to choose a Course Number*/
+        *//* Enable the user to choose a Course Number*//*
 
         mCourseNumber.addTextChangedListener(new TextWatcher() {
             @Override
@@ -95,7 +103,31 @@ public class NewStudyEvent extends AppCompatActivity{
             public void afterTextChanged(Editable s) {
 
             }
+        });*/
+
+        mBeginTime.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DialogFragment newFragment = new TimePickerFragment();
+                newFragment.show(getFragmentManager(),"TimePicker");
+
+
+            }
+        }
+        );
+
+
+
+
+        mEndTime.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DialogFragment newFragment = new TimePickerFragment2();
+                newFragment.show(getFragmentManager(),"TimePicker");
+
+            }
         });
+
 
         /* Enable the user to choose a maximum number of responders*/
         mMaxResponse.addTextChangedListener(new TextWatcher() {
@@ -184,6 +216,7 @@ public class NewStudyEvent extends AppCompatActivity{
                 mEvent.setTitle(parent.getItemAtPosition(position).toString());
             }
             public void onNothingSelected(AdapterView<?> parent) {
+
             }
         });
 
@@ -193,15 +226,23 @@ public class NewStudyEvent extends AppCompatActivity{
         mCreateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast toast = Toast.makeText(getApplicationContext(), "Event created for " + mEvent.getTitle() +
+                mEvent.setTimeStart(mBeginTime.getText().toString());
+                mEvent.setTimeEnd(mEndTime.getText().toString());
+                /*Toast toast = Toast.makeText(getApplicationContext(), "Event created for " + mEvent.getTitle() +
                                 " " + mEvent.getCourse() + ". " + "The maximum number of people is " +
-                                mEvent.getMaxpeople() + " and the location is at " + mEvent.getlocation()
+                                mEvent.getMaxpeople() + " and the location is at " + mEvent.getTimeStart()
                                 + ". Additional information is: " + mEvent.getInformation()
                         , Toast.LENGTH_LONG);
                 toast.show();
-
+*/
                 StudyEventList listofevent = StudyEventList.getInstance(getApplicationContext());
-                listofevent.addNewItem(mEvent);
+                boolean CopyEvent = listofevent.getCopy(mEvent.getID());
+                if(!CopyEvent) {
+                    listofevent.addNewItem(mEvent);
+                }
+                Intent i = FeedActivity.newIntentFeed(NewStudyEvent.this);
+
+                startActivity(i);
 
 
             }

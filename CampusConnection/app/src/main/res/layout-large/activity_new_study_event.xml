@@ -11,8 +11,7 @@
     tools:context="com.codingcrew.campusconnection.NewStudyEvent"
     android:background="@color/maroon">
 
-    <TextView
-        android:text="12 : 00"
+    <Button
         android:textSize="30sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -21,7 +20,9 @@
         android:textColor="@android:color/darker_gray"
         android:layout_alignBaseline="@+id/beginTime"
         android:layout_alignBottom="@+id/beginTime"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button"
+        android:text="12:00 PM"/>
 
 
 
@@ -50,18 +51,6 @@
         android:layout_alignBottom="@+id/beginText"
         android:layout_alignLeft="@+id/endTime"
         android:layout_alignStart="@+id/endTime"/>
-
-    <TextView
-        android:text="12 : 00"
-        android:textSize="30sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/beginTime"
-        android:textStyle="normal|bold"
-        android:textColor="@android:color/darker_gray"
-        android:layout_below="@+id/beginText"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"/>
 
     <TextView
         android:text="Pay?"
@@ -135,7 +124,8 @@
         android:layout_alignParentTop="true"
         android:layout_alignLeft="@+id/endText"
         android:layout_alignStart="@+id/endText"
-        android:layout_width="120dp"/>
+        android:layout_width="120dp"
+        android:visibility="invisible"/>
 
     <TextView
         android:text="Max Responders?"
@@ -187,7 +177,8 @@
         android:layout_alignParentStart="true"
         android:textColorHint="#979e9797"
         android:layout_alignRight="@+id/payBox"
-        android:layout_alignEnd="@+id/payBox"/>
+        android:layout_alignEnd="@+id/payBox"
+        android:visibility="invisible"/>
 
     <Spinner
         android:layout_width="match_parent"
@@ -197,5 +188,18 @@
         android:layout_alignParentEnd="true"
         android:layout_marginTop="62dp"
         android:id="@+id/Spinner_Course"/>
+
+    <Button
+        android:text="12:00 PM"
+        android:textSize="30sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/beginTime"
+        android:textStyle="normal|bold"
+        android:textColor="@android:color/darker_gray"
+        android:background="@drawable/button"
+        android:layout_below="@+id/beginText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
 
 </RelativeLayout>

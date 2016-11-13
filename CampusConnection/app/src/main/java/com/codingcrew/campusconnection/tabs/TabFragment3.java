@@ -84,7 +84,7 @@ public class TabFragment3 extends Fragment {
             super(itemView);
             itemView.setOnClickListener(this);
             mTitleTextView = (TextView) itemView.findViewById(R.id.mTitle);
-            mCourseTextView = (TextView) itemView.findViewById(R.id.mTime);
+            mCourseTextView = (TextView) itemView.findViewById(R.id.mTimeStart);
             mMaxpeopleTextView = (TextView) itemView.findViewById(R.id.number_of_people);
 
 
