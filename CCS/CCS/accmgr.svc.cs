@@ -65,5 +65,12 @@ namespace CCS
 
             return retValue;
         }
+
+        public List<Course> GetCourses()
+        {
+            CampusConnectionEntities context = new CampusConnectionEntities();
+            IQueryable<Course> iq = from c in context.Courses select c;            
+            return iq.ToList();
+        }
     }
 }

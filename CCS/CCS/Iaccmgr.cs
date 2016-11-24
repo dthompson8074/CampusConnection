@@ -16,5 +16,10 @@ namespace CCS
 
         [OperationContract]
         int CreateAccount(string email, string password, string fullname);
+
+        [OperationContract]
+        List<Course> GetCourses();
+
+
     }
 }

@@ -18,8 +18,8 @@ namespace CCS
         public string Prefix { get; set; }
         public Nullable<int> Number { get; set; }
         public string Name { get; set; }
-        public Nullable<System.DateTime> StartTime { get; set; }
-        public Nullable<System.DateTime> EndTime { get; set; }
+        public string StartTime { get; set; }
+        public string EndTime { get; set; }
         public string Days { get; set; }
         public string Instructor { get; set; }
     }
