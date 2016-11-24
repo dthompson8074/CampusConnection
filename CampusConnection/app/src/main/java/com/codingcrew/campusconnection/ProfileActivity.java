@@ -40,8 +40,8 @@ public class ProfileActivity extends AppCompatActivity {
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);
         tabLayout.addTab(tabLayout.newTab().setText("Study Event"));
         tabLayout.addTab(tabLayout.newTab().setText("Schedule"));
-        tabLayout.addTab(tabLayout.newTab().setText("Buddy"));
-        tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
+        //  tabLayout.addTab(tabLayout.newTab().setText("Buddy"));
+        tabLayout.setTabGravity(TabLayout.GRAVITY_CENTER);
 
 
         final ViewPager viewPager = (ViewPager) findViewById(R.id.pager);

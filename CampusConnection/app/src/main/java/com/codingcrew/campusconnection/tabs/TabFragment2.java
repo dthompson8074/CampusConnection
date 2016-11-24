@@ -60,8 +60,8 @@ public class TabFragment2 extends Fragment {
         List<EventData> events = mStudyEventList.getEvents();
 
         if (mTabFragment2Adapter == null) {
-            mTabFragment2Adapter = new TabFragment2Adapter(events);
-            mTabFragment2RecyclerView.setAdapter(mTabFragment2Adapter);
+          // mTabFragment2Adapter = new TabFragment2Adapter(events);
+           // mTabFragment2RecyclerView.setAdapter(mTabFragment2Adapter);
         } else {
             mTabFragment2Adapter.notifyDataSetChanged();
         }

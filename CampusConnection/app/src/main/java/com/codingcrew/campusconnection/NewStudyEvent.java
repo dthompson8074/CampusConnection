@@ -48,19 +48,23 @@ public class NewStudyEvent extends AppCompatActivity{
         setContentView(R.layout.activity_new_study_event);
 
         UUID eventId = (UUID) getIntent().getSerializableExtra(EXTRA_EVENT_ID);
-        if(eventId != null) {
-            mEvent = StudyEventList.getInstance(getApplicationContext()).getEvent(eventId);
-        }
+
         mLocation = (EditText) findViewById(R.id.textLocation);
         mExtraInfo = (EditText) findViewById(R.id.extraInfo);
         mBeginTime = (Button) findViewById(R.id.beginTime);
         mMaxResponse = (EditText) findViewById(R.id.maxResponders);
         mEndTime = (Button) findViewById(R.id.endTime);
 
-        mEndTime.setText(mEvent.getTimeEnd());
-        mBeginTime.setText(mEvent.getTimeStart());
-        mMaxResponse.setText(mEvent.getMaxpeople());
-        
+        if(eventId != null) {
+            mEvent = StudyEventList.getInstance(getApplicationContext()).getEvent(eventId);
+            mEndTime.setText(mEvent.getTimeEnd());
+            mBeginTime.setText(mEvent.getTimeStart());
+            mMaxResponse.setText(mEvent.getMaxpeople());
+            mExtraInfo.setText(mEvent.getInformation());
+        }
+
+
+
 
         // mPay = (CheckBox) findViewById(R.id.payBox);
 
@@ -106,14 +110,14 @@ public class NewStudyEvent extends AppCompatActivity{
         });*/
 
         mBeginTime.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                DialogFragment newFragment = new TimePickerFragment();
-                newFragment.show(getFragmentManager(),"TimePicker");
+                                          @Override
+                                          public void onClick(View v) {
+                                              DialogFragment newFragment = new TimePickerFragment();
+                                              newFragment.show(getFragmentManager(),"TimePicker");
 
 
-            }
-        }
+                                          }
+                                      }
         );
 
 
@@ -202,18 +206,21 @@ public class NewStudyEvent extends AppCompatActivity{
 
         /* create event*/
 
-        Spinner spinner = (Spinner) findViewById(R.id.Spinner_Course);
+        final Spinner spinner = (Spinner) findViewById(R.id.Spinner_Course);
 // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.course_name, android.R.layout.simple_spinner_item);
 // Specify the layout to use when the list of choices appears
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-// Apply the adapter to the spinner
+// Apply the adapter to the spinner;
+
         spinner.setAdapter(adapter);
+
 
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 mEvent.setTitle(parent.getItemAtPosition(position).toString());
+
             }
             public void onNothingSelected(AdapterView<?> parent) {
 
@@ -248,7 +255,7 @@ public class NewStudyEvent extends AppCompatActivity{
             }
         });
 
-
     }
+
 
 }

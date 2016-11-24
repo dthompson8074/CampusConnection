@@ -21,6 +21,8 @@ public class RegisterActivity extends AppCompatActivity {
 
     Button mButtonSend;
     EditText mEmail, mPassword, mCPassword, mName;
+    String comfirm_password = "default";
+    Toast toast;
     User mUser = User.getInstance();
 
     public static Intent newIntentRegister(Context packageContext) {
@@ -101,7 +103,7 @@ public class RegisterActivity extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                ;
+                comfirm_password = s.toString();
 
             }
 
@@ -113,13 +115,29 @@ public class RegisterActivity extends AppCompatActivity {
 
         mButtonSend.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Toast toast = Toast.makeText(getApplicationContext(), "Your registration is completed. " + mUser.getUsername()
-                        + ". " + "We hope you enjoy our services.", Toast.LENGTH_LONG);
-                toast.show();
-                Intent i = FeedActivity.newIntentFeed(RegisterActivity.this);
-                startActivity(i);
+
+                if(comfirmPassword(comfirm_password)) {
+                    toast = Toast.makeText(getApplicationContext(), "Your registration is completed. " + mUser.getUsername()
+                            + ". " + "We hope you enjoy our services.", Toast.LENGTH_LONG);
+                    toast.show();
+                    Intent i = FeedActivity.newIntentFeed(RegisterActivity.this);
+                    startActivity(i);
+                }
+                else{
+                    toast = Toast.makeText(getApplicationContext(), "Your password doesn't match" , Toast.LENGTH_SHORT);
+                    toast.show();
+                }
             }
         });
     }
+
+    public boolean
+    comfirmPassword(String password){
+
+        if (password.equals(mUser.getPassword())) {
+            return true;
+        }else {
+        return false;
+    }}
 
 }

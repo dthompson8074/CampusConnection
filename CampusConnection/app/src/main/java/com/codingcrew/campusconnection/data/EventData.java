@@ -11,7 +11,7 @@ public class EventData {
      */
     public static final String MAX_PEOPLE = "20";
     private String mMaxpeople;
-    private String mPrefix;
+  private String mPrefix;
     private String mCourse;
     private String mlocation;
     private String mInformation;
@@ -45,24 +45,25 @@ public class EventData {
         mTitle = title;
     }
 
-    public boolean getPayed() {
+   /* public boolean getPayed() {
         return mPayed;
     }
 
     public void setPayed(boolean payed) {
         mPayed = payed;
-    }
+    }*/
 
     public EventData() {
         mMaxpeople = MAX_PEOPLE;
-        mPrefix = "#####";
+       mPrefix = "#####";
         mCourse = "CS";
         mlocation = "Texas Tech";
-        mInformation = "Extra";
+        mInformation = "";
         mID = UUID.randomUUID();
         mTitle = "Study Event";
         mTimeEnd = "12:00AM";
         mTimeStart = "12:00AM";
+
     }
 
     public String getMaxpeople() {

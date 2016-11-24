@@ -95,6 +95,11 @@ public class LoginActivity extends AppCompatActivity {
                                 , Toast.LENGTH_LONG);
                         toast.show();
                         mUser.setUsername(acc.fullName);
+                        mUser.setEmail(acc.email);
+
+                        Intent i = FeedActivity.newIntentFeed(LoginActivity.this);
+
+                        startActivity(i);
                     }
                 } catch (InterruptedException e) {
                     e.printStackTrace();
@@ -103,9 +108,7 @@ public class LoginActivity extends AppCompatActivity {
                 }
 
                 // --- Quan commented out temporarily to test calling webservice --- start ---------
-                Intent i = FeedActivity.newIntentFeed(LoginActivity.this);
 
-                startActivity(i);
                 // --- Quan ------------------------------------------------------ end -------------
             }
         });
@@ -125,9 +128,5 @@ public class LoginActivity extends AppCompatActivity {
     }
 
 }
-
-
-
-
 
 
