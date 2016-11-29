@@ -116,16 +116,25 @@ public class RegisterActivity extends AppCompatActivity {
         mButtonSend.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
-                if(comfirmPassword(comfirm_password)) {
+
+                if (!vaildemail()){
+                    toast = Toast.makeText(getApplicationContext(), "Please enter a TTU email" , Toast.LENGTH_SHORT);
+                    toast.show();
+                }
+
+
+
+                else if(!comfirmPassword(comfirm_password)){
+                    toast = Toast.makeText(getApplicationContext(), "“Password are not identical" , Toast.LENGTH_SHORT);
+                    toast.show();
+
+                }
+                else  {
                     toast = Toast.makeText(getApplicationContext(), "Your registration is completed. " + mUser.getUsername()
                             + ". " + "We hope you enjoy our services.", Toast.LENGTH_LONG);
                     toast.show();
                     Intent i = FeedActivity.newIntentFeed(RegisterActivity.this);
                     startActivity(i);
-                }
-                else{
-                    toast = Toast.makeText(getApplicationContext(), "Your password doesn't match" , Toast.LENGTH_SHORT);
-                    toast.show();
                 }
             }
         });
@@ -139,5 +148,13 @@ public class RegisterActivity extends AppCompatActivity {
         }else {
         return false;
     }}
+
+    public boolean
+    vaildemail() {
+        if (mUser.getEmail().endsWith("@ttu.edu")) {
+            return true;
+        }
+        return false;
+    }
 
 }
